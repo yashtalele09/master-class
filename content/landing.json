@@ -1,0 +1,155 @@
+{
+  "masterclass": {
+    "title": "Digital Marketing Masterclass 2026",
+    "tagline": "Learn How to Earn ₹1 Lakh/Month Online",
+    "date": "2026-05-10T18:00:00",
+    "time": "6:00 PM IST",
+    "duration": "2 Hours",
+    "mode": "Live Online",
+    "language": "Hindi + English",
+    "price": "₹499",
+    "original_price": "₹1999"
+  },
+
+  "hero": {
+    "headline": "Build a Profitable Online Income in 2026",
+    "subheadline": "Step-by-step system to start earning using Digital Marketing",
+    "cta_text": "Reserve Your Seat Now",
+    "cta_subtext": "Only 50 seats left",
+    "urgency_badge": "🔥 Live on May 10th"
+  },
+
+  "instructor": {
+    "name": "Rahul Sharma",
+    "title": "Digital Marketing Coach & Entrepreneur",
+    "bio": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+    "image": "/images/uploads/instructor.jpg",
+    "credentials": [
+      { "point": "₹5Cr+ Revenue Generated" },
+      { "point": "5000+ Students Trained" },
+      { "point": "Featured in Startup India" }
+    ]
+  },
+
+  "what_you_learn": {
+    "headline": "What You’ll Learn",
+    "points": [
+      {
+        "title": "High-Income Digital Skills",
+        "description": "Learn skills that can generate ₹50K–₹1L/month"
+      },
+      {
+        "title": "Facebook & Instagram Ads",
+        "description": "Run profitable ads with low budget"
+      },
+      {
+        "title": "Sales Funnel Blueprint",
+        "description": "Convert visitors into paying customers"
+      },
+      {
+        "title": "Freelancing & Client Acquisition",
+        "description": "How to get clients from India & abroad"
+      }
+    ]
+  },
+
+  "curriculum": {
+    "headline": "Masterclass Curriculum",
+    "modules": [
+      {
+        "time": "0 - 20 mins",
+        "title": "Introduction to Digital Marketing",
+        "description": "Understand the ecosystem and opportunities"
+      },
+      {
+        "time": "20 - 50 mins",
+        "title": "Income Models",
+        "description": "Freelancing, agency & personal brand"
+      },
+      {
+        "time": "50 - 90 mins",
+        "title": "Ads & Funnel Strategy",
+        "description": "Step-by-step breakdown"
+      },
+      {
+        "time": "90 - 120 mins",
+        "title": "Live Q&A",
+        "description": "Solve your doubts directly"
+      }
+    ]
+  },
+
+  "social_proof": {
+    "headline": "Trusted by Thousands",
+    "stats": [
+      { "number": "5000+", "label": "Students Trained" },
+      { "number": "₹5Cr+", "label": "Revenue Generated" },
+      { "number": "4.8★", "label": "Average Rating" }
+    ],
+    "testimonials": [
+      {
+        "name": "Amit Verma",
+        "title": "Freelancer, Pune",
+        "avatar": "/images/uploads/user1.jpg",
+        "quote": "I started earning ₹30K/month after this masterclass!"
+      },
+      {
+        "name": "Priya Singh",
+        "title": "Student, Delhi",
+        "avatar": "/images/uploads/user2.jpg",
+        "quote": "Best investment I made in my career."
+      }
+    ]
+  },
+
+  "who_is_this_for": {
+    "headline": "Who Is This For?",
+    "audience": [
+      { "point": "Students looking for income" },
+      { "point": "Working professionals wanting side income" },
+      { "point": "Freelancers & entrepreneurs" }
+    ],
+    "not_for": [
+      { "point": "People looking for overnight success" },
+      { "point": "Those not willing to take action" }
+    ]
+  },
+
+  "faq": {
+    "headline": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is this masterclass live?",
+        "answer": "Yes, it is 100% live and interactive."
+      },
+      {
+        "question": "Will I get recording?",
+        "answer": "Yes, recording will be shared for limited time."
+      },
+      {
+        "question": "Is this beginner friendly?",
+        "answer": "Absolutely, no prior experience needed."
+      }
+    ]
+  },
+
+  "register_form": {
+    "headline": "Register Now",
+    "subheadline": "Secure your seat before it’s full",
+    "button_text": "Register Now",
+    "success_message": "🎉 You’re successfully registered! Check your WhatsApp.",
+    "fields_note": "We’ll send joining details on WhatsApp"
+  },
+
+  "footer": {
+    "company_name": "Growth Academy",
+    "tagline": "Learn. Grow. Earn.",
+    "refund_policy": "No refunds after purchase"
+  },
+
+  "seo": {
+    "title": "Digital Marketing Masterclass 2026 | Earn Online",
+    "description": "Join this live masterclass and learn how to earn ₹1L/month using digital marketing.",
+    "og_image": "/images/uploads/og.jpg"
+  }
+}

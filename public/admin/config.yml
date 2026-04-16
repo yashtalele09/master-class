@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: your-username/your-repo
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "landing"
+    label: "Landing Page"
+    files:
+      - file: "content/landing.json"
+        label: "Content"
+        name: "landing"
+        fields:
+          - label: "Masterclass"
+            name: "masterclass"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
