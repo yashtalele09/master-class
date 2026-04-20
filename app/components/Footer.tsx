@@ -8,7 +8,14 @@ const NAV = {
   Legal: ["Privacy", "Terms", "Refund policy"],
 };
 
-export default function Footer({ data }: any) {
+type FooterProps = {
+  data: {
+    company_name: string;
+    tagline: string;
+  };
+};
+
+export default function Footer({ data }: FooterProps) {
   return (
     <footer className="border-t bg-black border-gray-200">
       {/* Main */}

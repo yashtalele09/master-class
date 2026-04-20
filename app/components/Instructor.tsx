@@ -16,6 +16,8 @@ export default function Instructor({ data }: { data: InstructorData }) {
           <img
             src={data.image}
             alt={data.name}
+            width={192}
+            height={192}
             className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-zinc-900 shadow-xl"
           />
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { load } from "@cashfreepayments/cashfree-js";
 
 /* ─── Types ─────────────────────────────────────────────── */
@@ -264,7 +264,7 @@ export default function RegisterForm({ data }: RegisterFormProps) {
         body: JSON.stringify(form),
       });
 
-      let json: any;
+      let json: { message?: string; success_message?: string };
       try {
         json = await res.json();
       } catch {
@@ -279,12 +279,13 @@ export default function RegisterForm({ data }: RegisterFormProps) {
       );
 
       /* Meta Pixel */
-      if (typeof window !== "undefined" && (window as any).fbq) {
-        (window as any).fbq("track", "Lead");
+      if (typeof window !== "undefined" && (window as unknown as { fbq: (...args: unknown[]) => void }).fbq) {
+        (window as unknown as { fbq: (...args: unknown[]) => void }).fbq("track", "Lead");
       }
-    } catch (err: any) {
+    } catch (err) {
+      const error = err as Error;
       setStatus("error");
-      setMessage(err.message ?? "Something went wrong. Please try again.");
+      setMessage(error.message ?? "Something went wrong. Please try again.");
     }
   };
 
@@ -330,7 +331,7 @@ export default function RegisterForm({ data }: RegisterFormProps) {
 
             {/* Copy */}
             <h2 className="mb-2 text-center text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-              You're registered!
+              You&apos;re registered!
             </h2>
             <p className="mb-8 text-center text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
               {message}

@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import React from "react";
 
 interface Module {
   time: string;

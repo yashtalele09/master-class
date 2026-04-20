@@ -21,6 +21,7 @@ type WhatYouLearnData = {
 const ICONS: ReactElement[] = [
   // Layers
   <svg
+    key="layers"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -34,6 +35,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Clock
   <svg
+    key="clock"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -46,6 +48,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Activity
   <svg
+    key="activity"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -57,6 +60,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Users
   <svg
+    key="users"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -70,6 +74,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // File
   <svg
+    key="file"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -84,6 +89,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Target
   <svg
+    key="target"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -97,6 +103,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Zap
   <svg
+    key="zap"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -108,6 +115,7 @@ const ICONS: ReactElement[] = [
   </svg>,
   // Star
   <svg
+    key="star"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -270,7 +278,7 @@ export default function WhatYouLearn({ data }: { data: WhatYouLearnData }) {
           <div className="flex items-center gap-3 mb-5">
             <span className="h-px w-6 bg-zinc-300 dark:bg-zinc-700" />
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
-              What You'll Learn
+              What You&apos;ll Learn
             </span>
           </div>
 
