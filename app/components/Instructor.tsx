@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface InstructorData {
   name: string;
   title: string;
@@ -13,7 +15,7 @@ export default function Instructor({ data }: { data: InstructorData }) {
         {/* Profile Image */}
         <div className="relative w-48 h-48 flex-shrink-0">
           <div className="absolute inset-0 bg-[#EF9F27]/20 rounded-full blur-2xl" />
-          <img
+          <Image
             src={data.image}
             alt={data.name}
             width={192}
