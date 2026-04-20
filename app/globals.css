@@ -3,62 +3,64 @@
 @tailwind utilities;
 
 /* 🌐 Base Styles */
-/* body {
+body {
   @apply bg-white text-gray-900 antialiased;
 }
 
 /* 📦 Container */
-/* .container {
+.container {
   @apply max-w-6xl mx-auto px-4;
-} */
+}
 
 /* 🔥 Headings */
-/* h1 {
+h1 {
   @apply text-4xl md:text-5xl font-bold leading-tight;
-} */
+}
 
-/* h2 {
+h2 {
   @apply text-3xl md:text-4xl font-bold;
-} */
+}
 
-/* h3 {
+h3 {
   @apply text-xl font-semibold;
-} */
+}
 
 /* 📝 Paragraph */
-/* p {
+p {
   @apply text-gray-600 leading-relaxed;
-} */
+}
 
 /* 🔘 Buttons */
-/* .btn-primary {
+.btn-primary {
   @apply bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 transition;
 }
 
 .btn-dark {
   @apply bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition;
-} */
+}
 
 /* 📋 Inputs */
-/* input,
+input,
 select {
   @apply w-full border border-gray-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-yellow-400;
 }
 
-
+/* 🧱 Card */
 .card {
   @apply bg-white shadow-md rounded-xl p-6;
 }
 
-
+/* 🎯 Section spacing */
 .section {
   @apply py-16;
 }
 
+/* 📌 Sticky Header */
 .sticky-header {
   @apply fixed top-0 left-0 w-full bg-white shadow-md z-50 py-3 px-6 flex justify-between items-center;
 }
 
+/* ⏳ Loader Animation */
 .loader {
   @apply animate-pulse text-lg font-semibold;
-}  */
+}
