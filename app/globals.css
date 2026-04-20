@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@reference "tailwindcss";
+
 
 /* 🌐 Base Styles */
 body {
