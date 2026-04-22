@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
           customer_phone: phone,
         },
         order_meta: {
-          return_url: `http://localhost:3000/payment-success?order_id=${orderId}`,
+          return_url: `https://master-class-sigma.vercel.app/payment-success?order_id=${orderId}`,
         },
       }),
     });
