@@ -4,24 +4,34 @@
     "subheadline": "Secure your seat before it’s full",
     "button_text": "Register Now",
     "success_message": "🎉 You’re successfully registered! Check your WhatsApp.",
-    "fields_note": "We’ll send joining details on WhatsApp"
+    "fields_note": "We’ll send joining details on WhatsApp",
+    "benefits": [
+      "Rewire Your Subconscious Beliefs",
+      "Manifest Your Dream Life",
+      "Heal your Childhood Trauma",
+      "Remove Emotional Blockages"
+    ]
   },
   "what_you_learn": {
     "headline": "What You’ll Learn",
     "points": [
       {
+        "image": "https://www.enae.es/sites/default/files/inline-images/m%C3%A1ster-marketing-digital.png",
         "title": "High-Income Digital Skills",
         "description": "Learn skills that can generate ₹50K–₹1L/month"
       },
       {
+        "image": "https://tse2.mm.bing.net/th/id/OIP.ZYrhA2BWelJqoZ7F5q3ZbgHaEp?pid=Api&P=0&h=180",
         "title": "Facebook & Instagram Ads",
         "description": "Run profitable ads with low budget"
       },
       {
+        "image": "https://tse2.mm.bing.net/th/id/OIP.RH7-2AwDnusq4Wgzf3oa7QHaD4?pid=Api&P=0&h=180",
         "title": "Sales Funnel Blueprint",
         "description": "Convert visitors into paying customers"
       },
       {
+        "image": "https://tse2.mm.bing.net/th/id/OIP.q_J6_ntTsRZ02b8P2ZtbTgHaHa?pid=Api&P=0&h=180",
         "title": "Freelancing & Client Acquisition",
         "description": "How to get clients from India & abroad"
       }
@@ -87,11 +97,53 @@
     ]
   },
   "hero": {
-    "headline": "Build a Profitable Online Income in 2026 ",
+    "offer_badge": [
+      {
+        "emoji": "🔒",
+        "text": "Secure Payment"
+      },
+      {
+        "emoji": "✅",
+        "text": "Instant Access"
+      },
+      {
+        "emoji": "🎁",
+        "text": "Limited Seats"
+      }
+    ],
+    "meta": [
+      {
+        "icon": "📅",
+        "label": "Date",
+        "value": "2nd May 2026"
+      },
+      {
+        "icon": "🕘",
+        "label": "Time",
+        "value": "9:30AM – 12:30PM IST"
+      },
+      {
+        "icon": "⏳",
+        "label": "Duration",
+        "value": "3 Hours"
+      },
+      {
+        "icon": "🌐",
+        "label": "Language",
+        "value": "English"
+      }
+    ],
+    "price": "499",
+    "experience": "5+ Years",
+    "name": "Yash Talele",
+    "urgency_badge": "Live on May 10th",
     "subheadline": "Step-by-step system to start earning using Digital Marketing",
+    "headline": "Build a Profitable Online Income in 2026 ",
+    "title": "Digital Marketing Coach",
+    "image": "https://img.freepik.com/premium-photo/illustration-instructor_931878-219056.jpg",
+    "original_price": "1999",
     "cta_text": "Reserve Your Seat Now",
-    "cta_subtext": "Only 50 seats left",
-    "urgency_badge": "🔥 Live on May 10th"
+    "cta_subtext": "Only 50 seats left"
   },
   "curriculum": {
     "headline": "Masterclass Curriculum",
@@ -153,7 +205,43 @@
   "instructor": {
     "name": "Rahul Sharma",
     "title": "Digital Marketing Coach & Entrepreneur",
-    "bio": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+    "bioParagraphs": [
+      {
+        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "boldPhrases": [
+          "5000+",
+          "₹5 Crore"
+        ]
+      },
+      {
+        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "boldPhrases": [
+          "5000+",
+          "₹5 Crore"
+        ]
+      },
+      {
+        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "boldPhrases": [
+          "5000+",
+          "₹5 Crore"
+        ]
+      },
+      {
+        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "boldPhrases": [
+          "5000+",
+          "₹5 Crore"
+        ]
+      },
+      {
+        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "boldPhrases": [
+          "5000+",
+          "₹5 Crore"
+        ]
+      }
+    ],
     "image": "https://img.freepik.com/premium-photo/illustration-instructor_931878-219056.jpg",
     "credentials": [
       {
@@ -165,6 +253,8 @@
       {
         "point": "Featured in Startup India"
       }
-    ]
+    ],
+    "followerCount": "1.5 Million +",
+    "followerLabel": "followers"
   }
 }

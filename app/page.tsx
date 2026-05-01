@@ -10,7 +10,6 @@ import Curriculum from "./components/Curriculum";
 import SocialProof from "./components/SocialProof";
 import WhoIsThisFor from "./components/WhoIsThisFor";
 import FAQ from "./components/FAQ";
-import RegisterForm from "./components/RegistrationForm";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
@@ -28,19 +27,17 @@ export default function HomePage() {
     <main>
       <Hero data={data} />
 
-      <Instructor data={data.instructor} />
-
       <WhatYouLearn data={data.what_you_learn} />
 
       <Curriculum data={data.curriculum} />
+
+      <Instructor data={data.instructor} />
 
       <SocialProof data={data.social_proof} />
 
       <WhoIsThisFor data={data.who_is_this_for} />
 
       <FAQ data={data.faq} />
-
-      <RegisterForm data={data.register_form} />
 
       <Footer data={data.footer} />
     </main>

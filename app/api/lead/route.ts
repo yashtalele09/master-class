@@ -83,34 +83,6 @@ export async function POST(req: Request) {
       );
     }
 
-    /* ── WHATSAPP MESSAGE (OPTIONAL SAFE) ── */
-    try {
-      if (process.env.WHATSAPP_API_URL && process.env.WHATSAPP_API_KEY) {
-        await fetch(process.env.WHATSAPP_API_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.WHATSAPP_API_KEY}`,
-          },
-          body: JSON.stringify({
-            to: `91${whatsapp}`,
-            type: "text",
-            message: `Hey ${name} 👋
-
-You're successfully registered for the Masterclass 🚀
-
-👉 Complete your payment to confirm your seat:
-${process.env.NEXT_PUBLIC_SITE_URL}/pay
-
-See you inside 🔥`,
-          }),
-        });
-      }
-    } catch (waErr) {
-      console.error("WhatsApp Error:", waErr);
-      // ❌ don't fail API if WhatsApp fails
-    }
-
     /* ── SUCCESS RESPONSE ── */
     return NextResponse.json(
       {

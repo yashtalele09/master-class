@@ -13,239 +13,232 @@ collections:
         label: "Content"
         name: "landing"
         fields:
+          # ─── MASTERCLASS ───────────────────────────────────────────
           - label: "Masterclass"
             name: "masterclass"
             widget: "object"
             fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Tagline"
-                name: "tagline"
-                widget: "string"
-              - label: "Date"
-                name: "date"
-                widget: "datetime"
-              - label: "Time"
-                name: "time"
-                widget: "string"
-              - label: "Duration"
-                name: "duration"
-                widget: "string"
-              - label: "Mode"
-                name: "mode"
-                widget: "string"
-              - label: "Language"
-                name: "language"
-                widget: "string"
-              - label: "Price"
-                name: "price"
-                widget: "string"
-              - label: "Original Price"
-                name: "original_price"
-                widget: "string"
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Mode", name: "mode", widget: "string" }
+              - { label: "Language", name: "language", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - {
+                  label: "Original Price",
+                  name: "original_price",
+                  widget: "string",
+                }
 
+          # ─── HERO ──────────────────────────────────────────────────
           - label: "Hero Section"
             name: "hero"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
-              - label: "Subheadline"
-                name: "subheadline"
-                widget: "string"
-              - label: "CTA Button Text"
-                name: "cta_text"
-                widget: "string"
-              - label: "CTA Subtext"
-                name: "cta_subtext"
-                widget: "string"
-              - label: "Urgency Badge"
-                name: "urgency_badge"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "string" }
+              - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+              - { label: "CTA Subtext", name: "cta_subtext", widget: "string" }
+              - {
+                  label: "Urgency Badge",
+                  name: "urgency_badge",
+                  widget: "string",
+                }
+              - { label: "Instructor Name", name: "name", widget: "string" }
+              - { label: "Instructor Title", name: "title", widget: "string" }
+              - { label: "Experience", name: "experience", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - {
+                  label: "Original Price",
+                  name: "original_price",
+                  widget: "string",
+                }
+              - {
+                  label: "Instructor Image URL",
+                  name: "image",
+                  widget: "string",
+                }
+              - label: "Meta Info Badges"
+                name: "meta"
+                widget: "list"
+                fields:
+                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - label: "Offer Badges"
+                name: "offer_badge"
+                widget: "list"
+                fields:
+                  - { label: "Emoji", name: "emoji", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
 
+          # ─── INSTRUCTOR ────────────────────────────────────────────
           - label: "Instructor"
             name: "instructor"
             widget: "object"
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Bio"
-                name: "bio"
-                widget: "text"
-              - label: "Image URL"
-                name: "image"
-                widget: "string"
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - {
+                  label: "Follower Count",
+                  name: "followerCount",
+                  widget: "string",
+                }
+              - {
+                  label: "Follower Label",
+                  name: "followerLabel",
+                  widget: "string",
+                }
+              - label: "Bio Paragraphs"
+                name: "bioParagraphs"
+                widget: "list"
+                fields:
+                  - { label: "Paragraph Text", name: "text", widget: "text" }
+                  - label: "Bold Phrases"
+                    name: "boldPhrases"
+                    widget: "list"
+                    field: { label: "Phrase", name: "phrase", widget: "string" }
               - label: "Credentials"
                 name: "credentials"
                 widget: "list"
                 fields:
-                  - label: "Point"
-                    name: "point"
-                    widget: "string"
+                  - { label: "Point", name: "point", widget: "string" }
 
+          # ─── WHAT YOU'LL LEARN ─────────────────────────────────────
           - label: "What You'll Learn"
             name: "what_you_learn"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
               - label: "Points"
                 name: "points"
                 widget: "list"
                 fields:
-                  - label: "Title"
-                    name: "title"
-                    widget: "string"
-                  - label: "Description"
-                    name: "description"
-                    widget: "string"
+                  - { label: "Image URL", name: "image", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
 
+          # ─── CURRICULUM ────────────────────────────────────────────
           - label: "Curriculum"
             name: "curriculum"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
               - label: "Modules"
                 name: "modules"
                 widget: "list"
                 fields:
-                  - label: "Time"
-                    name: "time"
-                    widget: "string"
-                  - label: "Title"
-                    name: "title"
-                    widget: "string"
-                  - label: "Description"
-                    name: "description"
-                    widget: "string"
+                  - { label: "Time", name: "time", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
 
+          # ─── SOCIAL PROOF ──────────────────────────────────────────
           - label: "Social Proof"
             name: "social_proof"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
               - label: "Stats"
                 name: "stats"
                 widget: "list"
                 fields:
-                  - label: "Number"
-                    name: "number"
-                    widget: "string"
-                  - label: "Label"
-                    name: "label"
-                    widget: "string"
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
               - label: "Testimonials"
                 name: "testimonials"
                 widget: "list"
                 fields:
-                  - label: "Name"
-                    name: "name"
-                    widget: "string"
-                  - label: "Title"
-                    name: "title"
-                    widget: "string"
-                  - label: "Avatar"
-                    name: "avatar"
-                    widget: "string"
-                  - label: "Quote"
-                    name: "quote"
-                    widget: "text"
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Avatar URL", name: "avatar", widget: "string" }
+                  - { label: "Quote", name: "quote", widget: "text" }
 
+          # ─── WHO IS THIS FOR ───────────────────────────────────────
           - label: "Who Is This For"
             name: "who_is_this_for"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
-              - label: "Audience"
+              - { label: "Headline", name: "headline", widget: "string" }
+              - label: "Audience (For)"
                 name: "audience"
                 widget: "list"
                 fields:
-                  - label: "Point"
-                    name: "point"
-                    widget: "string"
+                  - { label: "Point", name: "point", widget: "string" }
               - label: "Not For"
                 name: "not_for"
                 widget: "list"
                 fields:
-                  - label: "Point"
-                    name: "point"
-                    widget: "string"
+                  - { label: "Point", name: "point", widget: "string" }
 
+          # ─── FAQ ───────────────────────────────────────────────────
           - label: "FAQ"
             name: "faq"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
               - label: "Items"
                 name: "items"
                 widget: "list"
                 fields:
-                  - label: "Question"
-                    name: "question"
-                    widget: "string"
-                  - label: "Answer"
-                    name: "answer"
-                    widget: "text"
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
 
+          # ─── REGISTER FORM ─────────────────────────────────────────
           - label: "Register Form"
             name: "register_form"
             widget: "object"
             fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
-              - label: "Subheadline"
-                name: "subheadline"
-                widget: "string"
-              - label: "Button Text"
-                name: "button_text"
-                widget: "string"
-              - label: "Success Message"
-                name: "success_message"
-                widget: "string"
-              - label: "Fields Note"
-                name: "fields_note"
-                widget: "string"
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "string" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+              - {
+                  label: "Success Message",
+                  name: "success_message",
+                  widget: "string",
+                }
+              - { label: "Fields Note", name: "fields_note", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                field: { label: "Benefit", name: "benefit", widget: "string" }
 
+          # ─── FOOTER ────────────────────────────────────────────────
           - label: "Footer"
             name: "footer"
             widget: "object"
             fields:
-              - label: "Company Name"
-                name: "company_name"
-                widget: "string"
-              - label: "Tagline"
-                name: "tagline"
-                widget: "string"
-              - label: "Refund Policy"
-                name: "refund_policy"
-                widget: "string"
+              - {
+                  label: "Company Name",
+                  name: "company_name",
+                  widget: "string",
+                }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - {
+                  label: "Refund Policy",
+                  name: "refund_policy",
+                  widget: "string",
+                }
 
+          # ─── SEO ───────────────────────────────────────────────────
           - label: "SEO"
             name: "seo"
             widget: "object"
             fields:
-              - label: "Meta Title"
-                name: "title"
-                widget: "string"
-              - label: "Meta Description"
-                name: "description"
-                widget: "text"
-              - label: "OG Image"
-                name: "og_image"
-                widget: "string"
+              - { label: "Meta Title", name: "title", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "description",
+                  widget: "text",
+                }
+              - { label: "OG Image URL", name: "og_image", widget: "string" }

@@ -20,13 +20,60 @@ export async function POST(req: NextRequest) {
     console.log("Cashfree Order:", order);
 
     if (order.order_status === "PAID" || order.order_status === "SUCCESS") {
-      const { error } = await supabase
+      /* ── GET USER DATA ── */
+      const { data: lead } = await supabase
+        .from("leads")
+        .select("full_name, whatsapp, payment_status")
+        .eq("order_id", orderId)
+        .single();
+
+      if (!lead) {
+        return Response.json({ success: false });
+      }
+
+      /* ── PREVENT DUPLICATE MESSAGE ── */
+      if (lead.payment_status === "paid") {
+        return Response.json({ success: true });
+      }
+
+      /* ── UPDATE DB ── */
+      await supabase
         .from("leads")
         .update({ payment_status: "paid" })
         .eq("order_id", orderId);
 
-      if (error) {
-        console.log("Supabase error:", error);
+      /* ── SEND WHATSAPP HERE ✅ ── */
+      try {
+        const accountSid = process.env.TWILIO_ACCOUNT_SID!;
+        const authToken = process.env.TWILIO_AUTH_TOKEN!;
+
+        const credentials = Buffer.from(`${accountSid}:${authToken}`).toString(
+          "base64",
+        );
+
+        await fetch(
+          `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              Authorization: `Basic ${credentials}`,
+            },
+            body: new URLSearchParams({
+              From: "whatsapp:+14155238886",
+              To: `whatsapp:+91${lead.whatsapp}`,
+              Body: `Hey ${lead.full_name} 👋
+
+✅ Payment received successfully!
+
+🎉 Your seat for the Masterclass is confirmed.
+
+See you inside 🚀`,
+            }),
+          },
+        );
+      } catch (waErr) {
+        console.error("WhatsApp Error:", waErr);
       }
 
       return Response.json({ success: true });
