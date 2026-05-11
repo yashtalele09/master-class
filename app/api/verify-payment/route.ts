@@ -1,7 +1,6 @@
 import { Cashfree, CFEnvironment } from "cashfree-pg";
 import { NextRequest } from "next/server";
 import { supabase } from "@/lib/supabase";
-
 const cashfree = new Cashfree(
   CFEnvironment.SANDBOX,
   process.env.CASHFREE_APP_ID!,

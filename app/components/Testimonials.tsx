@@ -27,11 +27,12 @@ const AVATAR_COLORS: Record<string, string> = {
   V: "#f472b6",
 };
 
-function Avatar({ initial, src }: { initial?: string; src?: string }) {
-  if (src) {
+function Avatar({ initial, src, avatar }: { initial?: string; src?: string; avatar?: string }) {
+  const imageSrc = src || avatar;
+  if (imageSrc) {
     return (
       <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full ring-2 ring-amber-200/60">
-        <Image src={src} alt="avatar" fill className="object-cover" />
+        <Image src={imageSrc} alt="avatar" fill className="object-cover" />
       </div>
     );
   }
@@ -40,7 +41,7 @@ function Avatar({ initial, src }: { initial?: string; src?: string }) {
     <div
       className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white text-lg font-bold ring-2 ring-white/40"
       style={{ background: color }}>
-      {initial}
+      {initial || "T"}
     </div>
   );
 }
@@ -62,7 +63,7 @@ function QuoteIcon() {
   );
 }
 
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+function TestimonialCard({ testimonial }: { testimonial: any }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -92,7 +93,11 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Header: Avatar + Name */}
       <div className="mb-4 flex items-center gap-3">
-        <Avatar initial={testimonial.avatarInitial} src={testimonial.image} />
+        <Avatar 
+          initial={testimonial.avatarInitial || testimonial.name?.[0]} 
+          src={testimonial.image} 
+          avatar={testimonial.avatar} 
+        />
         <div>
           <p
             className="font-extrabold text-gray-900 text-lg leading-tight"
@@ -100,7 +105,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             {testimonial.name}
           </p>
           <p className="text-sm text-gray-400 font-medium">
-            {testimonial.role}
+            {testimonial.role || testimonial.title}
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ interface BioParagraph {
 interface CoachData {
   name: string;
   title: string;
-  credentials: { point: string; }[];
+  credentials: { point: string }[];
   image: string;
   socialIcon?: "instagram" | "youtube" | "twitter";
   followerCount: string;
@@ -43,17 +43,25 @@ function useInView(threshold = 0.1) {
 }
 
 /* ─── Rich text renderer (bold phrases) ─────────────────────── */
-function RichText({ text, boldPhrases = [] }: BioParagraph) {
-  if (boldPhrases.length === 0) return <>{text}</>;
+function RichText({ text, boldPhrases = [] }: any) {
+  if (!boldPhrases || boldPhrases.length === 0) return <>{text}</>;
+
+  // Normalize boldPhrases to an array of strings
+  const phrases = boldPhrases
+    .map((p: any) => (typeof p === "string" ? p : p?.phrase))
+    .filter(Boolean);
+
+  if (phrases.length === 0) return <>{text}</>;
+
   const regex = new RegExp(
-    `(${boldPhrases.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    `(${phrases.map((p: string) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
     "gi",
   );
   const parts = text.split(regex);
   return (
     <>
-      {parts.map((part, i) =>
-        boldPhrases.some((p) => p.toLowerCase() === part.toLowerCase()) ? (
+      {parts.map((part: string, i: number) =>
+        phrases.some((p: string) => p.toLowerCase() === part.toLowerCase()) ? (
           <strong key={i} className="font-bold text-white">
             {part}
           </strong>
@@ -84,7 +92,13 @@ function InstagramIcon() {
 }
 
 /* ─── Main Component ─────────────────────────────────────────── */
-export default function MeetCoach({ data, labels }: { data: CoachData; labels: any }) {
+export default function MeetCoach({
+  data,
+  labels,
+}: {
+  data: CoachData;
+  labels: any;
+}) {
   const { ref, inView } = useInView(0.1);
 
   return (
@@ -201,13 +215,45 @@ export default function MeetCoach({ data, labels }: { data: CoachData; labels: a
               "flex-1 flex flex-col gap-5 transition-all duration-700 delay-150 ease-out",
               inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8",
             ].join(" ")}>
-            {data.bioParagraphs.map((para, i) => (
-              <p
-                key={i}
-                className="text-[14px] sm:text-[18px] leading-relaxed text-white/80">
-                <RichText text={para.text} boldPhrases={para.boldPhrases} />
-              </p>
-            ))}
+            {/* Bio Paragraphs */}
+            <div className="flex flex-col gap-5">
+              {data.bioParagraphs.map((para, i) => (
+                <p
+                  key={i}
+                  className="text-[14px] sm:text-[18px] leading-relaxed text-white/80">
+                  <RichText text={para.text} boldPhrases={para.boldPhrases} />
+                </p>
+              ))}
+            </div>
+
+            {/* Credentials / Key Points */}
+            {data.credentials && data.credentials.length > 0 && (
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {data.credentials.map((cred, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 shadow-inner">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-green-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={3}>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-sm font-semibold text-white/90">
+                      {cred.point}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -17,18 +17,34 @@ import TestimonialsSection from "./components/Testimonials";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = await client.fetch(LANDING_QUERY) || localData;
+  const data = await client.fetch(LANDING_QUERY);
+  const finalData = { ...localData, ...data };
   return {
-    title: data.seo?.title ?? data.hero?.headline,
-    description: data.seo?.description ?? data.hero?.subheadline,
+    title: finalData.seo?.title ?? finalData.hero?.headline,
+    description: finalData.seo?.description ?? finalData.hero?.subheadline,
   };
 }
 
 export default async function HomePage() {
   const data = await client.fetch(LANDING_QUERY);
   
-  // Fallback to local data if Sanity is empty
-  const finalData = data || localData;
+  // Fallback to local data if Sanity is empty or missing fields
+  const finalData = {
+    ...localData,
+    ...data,
+    labels: { ...localData.labels, ...data?.labels },
+    hero: data?.hero || localData.hero,
+    webinar_hero: data?.webinar_hero || localData.webinar_hero,
+    what_you_learn: data?.what_you_learn || localData.what_you_learn,
+    curriculum: data?.curriculum || localData.curriculum,
+    instructor: data?.instructor || localData.instructor,
+    testimonials: data?.testimonials || localData.testimonials,
+    social_proof: data?.social_proof || localData.social_proof,
+    who_is_this_for: data?.who_is_this_for || localData.who_is_this_for,
+    faq: data?.faq || localData.faq,
+    footer: data?.footer || localData.footer,
+    section_order: data?.section_order || localData.section_order,
+  };
   const labels = finalData.labels;
 
   return (

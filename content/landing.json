@@ -46,8 +46,8 @@
   },
   "webinar_hero": {
     "language": "Hindi + English",
-    "date": "2026-05-18T18:00:00",
-    "time": "6:00 PM IST",
+    "date": "2026-05-3T18:00:00",
+    "time": "12:00 PM IST",
     "original_price": "1999",
     "price": "499",
     "duration": "2 Hours",
@@ -234,31 +234,19 @@
     "og_image": "/images/uploads/og.jpg"
   },
   "instructor": {
-    "name": "Rahul Sharma",
-    "title": "Digital Marketing Coach & Entrepreneur",
+    "name": "Shikha Kaushal",
+    "title": "Leading Parenting & Kids Coach",
     "bioParagraphs": [
       {
-        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "text": "Shikha Kaushal has spent over 17 years helping students, professionals, children and families—through simple, powerful practices rooted in breathwork, yoga, and Indian Knowledge Systems (IKS).",
         "boldPhrases": ["5000+", "₹5 Crore"]
       },
       {
-        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": ["5000+", "₹5 Crore"]
-      },
-      {
-        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": ["5000+", "₹5 Crore"]
-      },
-      {
-        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": ["5000+", "₹5 Crore"]
-      },
-      {
-        "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
+        "text": "With a background in science as a former Bioinformatics Research Associate and an MS graduate from the , Shikha brings together modern understanding and timeless Indian wisdom to create sessions that are both practical and deeply transformative.",
         "boldPhrases": ["5000+", "₹5 Crore"]
       }
     ],
-    "image": "https://img.freepik.com/premium-photo/illustration-instructor_931878-219056.jpg",
+    "image": "https://tagmango.com/staticassets/-best-kids-vaccation-and-parenting-program-bcc58b8ca1c33470f74eca0dabfea38c.png",
     "credentials": [
       { "point": "₹5Cr+ Revenue Generated" },
       { "point": "5000+ Students Trained" },
