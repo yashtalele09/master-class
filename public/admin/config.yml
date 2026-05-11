@@ -13,25 +13,6 @@ collections:
         label: "Content"
         name: "landing"
         fields:
-          # ─── MASTERCLASS ───────────────────────────────────────────
-          - label: "Masterclass"
-            name: "masterclass"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Tagline", name: "tagline", widget: "string" }
-              - { label: "Date", name: "date", widget: "datetime" }
-              - { label: "Time", name: "time", widget: "string" }
-              - { label: "Duration", name: "duration", widget: "string" }
-              - { label: "Mode", name: "mode", widget: "string" }
-              - { label: "Language", name: "language", widget: "string" }
-              - { label: "Price", name: "price", widget: "string" }
-              - {
-                  label: "Original Price",
-                  name: "original_price",
-                  widget: "string",
-                }
-
           # ─── HERO ──────────────────────────────────────────────────
           - label: "Hero Section"
             name: "hero"
@@ -74,39 +55,6 @@ collections:
                   - { label: "Emoji", name: "emoji", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
 
-          # ─── INSTRUCTOR ────────────────────────────────────────────
-          - label: "Instructor"
-            name: "instructor"
-            widget: "object"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image URL", name: "image", widget: "string" }
-              - {
-                  label: "Follower Count",
-                  name: "followerCount",
-                  widget: "string",
-                }
-              - {
-                  label: "Follower Label",
-                  name: "followerLabel",
-                  widget: "string",
-                }
-              - label: "Bio Paragraphs"
-                name: "bioParagraphs"
-                widget: "list"
-                fields:
-                  - { label: "Paragraph Text", name: "text", widget: "text" }
-                  - label: "Bold Phrases"
-                    name: "boldPhrases"
-                    widget: "list"
-                    field: { label: "Phrase", name: "phrase", widget: "string" }
-              - label: "Credentials"
-                name: "credentials"
-                widget: "list"
-                fields:
-                  - { label: "Point", name: "point", widget: "string" }
-
           # ─── WHAT YOU'LL LEARN ─────────────────────────────────────
           - label: "What You'll Learn"
             name: "what_you_learn"
@@ -142,6 +90,39 @@ collections:
                       name: "description",
                       widget: "string",
                     }
+
+          # ─── INSTRUCTOR ────────────────────────────────────────────
+          - label: "Instructor"
+            name: "instructor"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - {
+                  label: "Follower Count",
+                  name: "followerCount",
+                  widget: "string",
+                }
+              - {
+                  label: "Follower Label",
+                  name: "followerLabel",
+                  widget: "string",
+                }
+              - label: "Bio Paragraphs"
+                name: "bioParagraphs"
+                widget: "list"
+                fields:
+                  - { label: "Paragraph Text", name: "text", widget: "text" }
+                  - label: "Bold Phrases"
+                    name: "boldPhrases"
+                    widget: "list"
+                    field: { label: "Phrase", name: "phrase", widget: "string" }
+              - label: "Credentials"
+                name: "credentials"
+                widget: "list"
+                fields:
+                  - { label: "Point", name: "point", widget: "string" }
 
           # ─── SOCIAL PROOF ──────────────────────────────────────────
           - label: "Social Proof"
@@ -194,7 +175,43 @@ collections:
                   - { label: "Question", name: "question", widget: "string" }
                   - { label: "Answer", name: "answer", widget: "text" }
 
-          # ─── REGISTER FORM ─────────────────────────────────────────
+          # ─── FOOTER ────────────────────────────────────────────────
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {
+                  label: "Company Name",
+                  name: "company_name",
+                  widget: "string",
+                }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - {
+                  label: "Refund Policy",
+                  name: "refund_policy",
+                  widget: "string",
+                }
+
+          # ─── MASTERCLASS (NOT UI SECTION) ──────────────────────────
+          - label: "Masterclass"
+            name: "masterclass"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Mode", name: "mode", widget: "string" }
+              - { label: "Language", name: "language", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - {
+                  label: "Original Price",
+                  name: "original_price",
+                  widget: "string",
+                }
+
+          # ─── REGISTER FORM (SEPARATE PAGE) ─────────────────────────
           - label: "Register Form"
             name: "register_form"
             widget: "object"
@@ -212,23 +229,6 @@ collections:
                 name: "benefits"
                 widget: "list"
                 field: { label: "Benefit", name: "benefit", widget: "string" }
-
-          # ─── FOOTER ────────────────────────────────────────────────
-          - label: "Footer"
-            name: "footer"
-            widget: "object"
-            fields:
-              - {
-                  label: "Company Name",
-                  name: "company_name",
-                  widget: "string",
-                }
-              - { label: "Tagline", name: "tagline", widget: "string" }
-              - {
-                  label: "Refund Policy",
-                  name: "refund_policy",
-                  widget: "string",
-                }
 
           # ─── SEO ───────────────────────────────────────────────────
           - label: "SEO"

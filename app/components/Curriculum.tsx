@@ -12,7 +12,7 @@ interface CurriculumData {
   modules: Module[];
 }
 
-export default function Curriculum({ data }: { data: CurriculumData }) {
+export default function Curriculum({ data, labels }: { data: CurriculumData; labels: any }) {
   const totalModules = data.modules.length;
 
   return (
@@ -23,7 +23,7 @@ export default function Curriculum({ data }: { data: CurriculumData }) {
           <p
             style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
             className="text-xs tracking-widest uppercase text-gray-400 mb-3">
-            Course Curriculum
+            {labels.course_curriculum}
           </p>
           <h2
             style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
@@ -66,7 +66,7 @@ export default function Curriculum({ data }: { data: CurriculumData }) {
         <div className="mt-12 flex items-center justify-center gap-4 text-sm text-gray-400">
           <div className="flex-1 h-px bg-gray-200" />
           <span className="font-medium text-gray-500">
-            {totalModules} Modules Included
+            {totalModules} {labels.modules_included}
           </span>
           <div className="flex-1 h-px bg-gray-200" />
         </div>

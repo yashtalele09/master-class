@@ -122,7 +122,7 @@ function StyledHeadline({
 }
 
 /* ─── Main component ─────────────────────────────────────────── */
-export default function WhatYouLearn({ data }: { data: WhatYouLearnData }) {
+export default function WhatYouLearn({ data, labels }: { data: WhatYouLearnData; labels?: any }) {
   const { ref, inView } = useInView(0.1);
 
   return (

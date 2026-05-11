@@ -6,9 +6,10 @@ type SocialProofProps = {
       label: string;
     }>;
   };
+  labels?: any;
 };
 
-export default function ProfessionalSocialProof({ data }: SocialProofProps) {
+export default function ProfessionalSocialProof({ data, labels }: SocialProofProps) {
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto text-center">

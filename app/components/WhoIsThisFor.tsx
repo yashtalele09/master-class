@@ -165,7 +165,7 @@ function ItemBlock({
 }
 
 /* ─── Main Component ─────────────────────────────────────────── */
-export default function WhoIsThisFor({ data }: { data: WhoIsThisForData }) {
+export default function WhoIsThisFor({ data, labels }: { data: WhoIsThisForData; labels: any }) {
   const { ref, inView } = useInView(0.1);
 
   return (
@@ -189,7 +189,7 @@ export default function WhoIsThisFor({ data }: { data: WhoIsThisForData }) {
 
         {/* ── FOR YOU section ── */}
         <ItemBlock
-          title="This Is For You If..."
+          title={labels.this_is_for_you_if}
           titleColor="text-[#1a6b2a]"
           items={data.audience.map((a) => a.point)}
           variant="green"
@@ -201,14 +201,14 @@ export default function WhoIsThisFor({ data }: { data: WhoIsThisForData }) {
         <div className="my-10 flex items-center gap-4">
           <div className="flex-1 h-px bg-[#e2e2e2]" />
           <span className="text-xs font-bold uppercase tracking-widest text-[#aaa]">
-            vs
+            {labels.vs}
           </span>
           <div className="flex-1 h-px bg-[#e2e2e2]" />
         </div>
 
         {/* ── NOT FOR YOU section ── */}
         <ItemBlock
-          title="This Is NOT For You If..."
+          title={labels.this_is_not_for_you_if}
           titleColor="text-[#b91c1c]"
           items={data.not_for.map((n) => n.point)}
           variant="red"

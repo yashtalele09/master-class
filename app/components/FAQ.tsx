@@ -7,6 +7,8 @@ interface FAQItemType {
 }
 
 interface FAQData {
+  headline_accent?: string;
+  headline_main?: string;
   headline: string;
   items: FAQItemType[];
 }
@@ -43,7 +45,7 @@ export function FAQItem({ item }: { item: FAQItemType }) {
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}>
         <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-sm text-gray-700 leading-relaxed">
+          <p className="px-6 pb-5 text-sm text-gray-700 leading-relaxed whitespace-pre-line">
             {item.answer}
           </p>
         </div>
@@ -52,7 +54,7 @@ export function FAQItem({ item }: { item: FAQItemType }) {
   );
 }
 
-export default function ProfessionalFAQ({ data }: { data: FAQData }) {
+export default function ProfessionalFAQ({ data, labels }: { data: FAQData; labels: any }) {
   return (
     <section className="py-20 px-6 bg-[#f7f7f7]">
       <div className="max-w-4xl mx-auto">
@@ -61,8 +63,8 @@ export default function ProfessionalFAQ({ data }: { data: FAQData }) {
           <h2
             style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
             className="text-4xl md:text-5xl font-semibold">
-            <span className="text-pink-600">Frequently</span>{" "}
-            <span className="text-blue-900">Asked Questions</span>
+            <span className="text-pink-600">{data.headline_accent || "Frequently"}</span>{" "}
+            <span className="text-blue-900">{data.headline_main || "Asked Questions"}</span>
           </h2>
 
           <div className="mt-4 w-24 h-1 bg-pink-600 mx-auto rounded-full" />

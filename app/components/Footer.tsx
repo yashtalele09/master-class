@@ -2,20 +2,18 @@ import { HexagonIcon } from "lucide-react";
 import { BsTwitter } from "react-icons/bs";
 import { LiaLinkedin } from "react-icons/lia";
 
-const NAV = {
-  Product: ["Features", "Pricing", "Changelog"],
-  Company: ["About", "Blog", "Careers"],
-  Legal: ["Privacy", "Terms", "Refund policy"],
-};
+
 
 type FooterProps = {
   data: {
     company_name: string;
     tagline: string;
+    nav: Record<string, string[]>;
   };
+  labels: any;
 };
 
-export default function Footer({ data }: FooterProps) {
+export default function Footer({ data, labels }: FooterProps) {
   return (
     <footer className="border-t bg-black border-gray-200">
       {/* Main */}
@@ -47,7 +45,7 @@ export default function Footer({ data }: FooterProps) {
 
         {/* Nav columns */}
         <div className="flex gap-12 flex-wrap">
-          {Object.entries(NAV).map(([section, links]) => (
+          {Object.entries(data.nav || {}).map(([section, links]) => (
             <div key={section}>
               <p className="text-[11px] font-medium tracking-widest uppercase text-gray-400 mb-3">
                 {section}

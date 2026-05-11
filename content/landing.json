@@ -1,10 +1,42 @@
 {
+  "section_order": [
+    "hero",
+    "webinar_hero",
+    "what_you_learn",
+    "curriculum",
+    "instructor",
+    "social_proof",
+    "testimonials",
+    "who_is_this_for",
+    "faq",
+    "footer"
+  ],
+  "labels": {
+    "live": "Live",
+    "experience": "Experience",
+    "course_curriculum": "Course Curriculum",
+    "modules_included": "Modules Included",
+    "meet_your_coach": "Meet Your Coach",
+    "this_is_for_you_if": "This Is For You If...",
+    "this_is_not_for_you_if": "This Is NOT For You If...",
+    "vs": "vs",
+    "back": "Back",
+    "live_masterclass": "✦ Live Masterclass · Limited Seats ✦",
+    "what_you_will_gain": "What you'll gain",
+    "people_registered": "people have already registered",
+    "free_registration": "Free Registration",
+    "reserve_your_spot": "Reserve Your Spot",
+    "fill_details": "Fill in your details below to join the masterclass",
+    "secured_by": "Secured by Razorpay · UPI, cards & netbanking",
+    "confirm_seat": "Confirm Seat — Pay",
+    "one_time": "one-time"
+  },
   "register_form": {
     "headline": "Register Now",
-    "subheadline": "Secure your seat before it’s full",
+    "subheadline": "Secure your seat before it's full",
     "button_text": "Register Now",
-    "success_message": "🎉 You’re successfully registered! Check your WhatsApp.",
-    "fields_note": "We’ll send joining details on WhatsApp",
+    "success_message": "🎉 You're successfully registered! Check your WhatsApp.",
+    "fields_note": "We'll send joining details on WhatsApp",
     "benefits": [
       "Rewire Your Subconscious Beliefs",
       "Manifest Your Dream Life",
@@ -12,59 +44,82 @@
       "Remove Emotional Blockages"
     ]
   },
+  "webinar_hero": {
+    "language": "Hindi + English",
+    "date": "2026-05-18T18:00:00",
+    "time": "6:00 PM IST",
+    "original_price": "1999",
+    "price": "499",
+    "duration": "2 Hours",
+    "cta_text": "Reserve My Spot",
+    "cta_subtext": "Only 50 seats left",
+    "title": "Digital Marketing Masterclass",
+    "tagline": "Learn High-Income Skills Online",
+    "instructor_image": "/images/hero.png",
+    "instructor_name": "Shikha Kaushal",
+    "instructor_details": "5+ Years Experience | Founder, Growth Academy",
+    "video_url": "https://www.youtube.com/embed/TFrz6jj8oqA",
+    "benefits": [
+      { "icon": "🚀", "text": "High-Income Skills" },
+      { "icon": "💸", "text": "Lucrative Career Paths" },
+      { "icon": "🤝", "text": "Direct Mentorship" },
+      { "icon": "📈", "text": "Business Growth Strategies" }
+    ]
+  },
   "what_you_learn": {
-    "headline": "What You’ll Learn",
+    "headline": "What You'll Learn",
+    "accentWords": ["Learn"],
     "points": [
       {
         "image": "https://www.enae.es/sites/default/files/inline-images/m%C3%A1ster-marketing-digital.png",
-        "title": "High-Income Digital Skills",
-        "description": "Learn skills that can generate ₹50K–₹1L/month"
+        "title": "Fun Yoga for Kids",
+        "description": "Playful movement that builds focus, flexibility & calmness"
       },
       {
         "image": "https://tse2.mm.bing.net/th/id/OIP.ZYrhA2BWelJqoZ7F5q3ZbgHaEp?pid=Api&P=0&h=180",
-        "title": "Facebook & Instagram Ads",
-        "description": "Run profitable ads with low budget"
+        "title": "Indie Games & Stories",
+        "description": "Traditional games and stories that spark  thinking + values + joy"
       },
       {
         "image": "https://tse2.mm.bing.net/th/id/OIP.RH7-2AwDnusq4Wgzf3oa7QHaD4?pid=Api&P=0&h=180",
-        "title": "Sales Funnel Blueprint",
-        "description": "Convert visitors into paying customers"
+        "title": " DIY Activities",
+        "description": "Hands-on ‘Creative’ cultural crafts that boost learning and confidence"
       },
       {
         "image": "https://tse2.mm.bing.net/th/id/OIP.q_J6_ntTsRZ02b8P2ZtbTgHaHa?pid=Api&P=0&h=180",
-        "title": "Freelancing & Client Acquisition",
-        "description": "How to get clients from India & abroad"
+        "title": "Bonding & Connection",
+        "description": "Meaningful activities designed for parents & grandparents to join in"
       }
     ]
   },
   "social_proof": {
     "headline": "Trusted by Thousands",
     "stats": [
+      { "number": "5000+", "label": "Students Trained" },
+      { "number": "₹5Cr+", "label": "Revenue Generated" },
+      { "number": "4.8★", "label": "Average Rating" }
+    ]
+  },
+  "testimonials": {
+    "headline": "What Parents Say",
+    "items": [
       {
-        "number": "5000+",
-        "label": "Students Trained"
+        "name": "Tuhina",
+        "role": "Senior IT Professional, Mumbai",
+        "quote": "Thank you for the amazing session. My kids enjoyed it as always, especially the stories behind the chants. We also had our share of key takeaways...in terms of discovering Parth's storytelling skills – which boosted his confidence manyfold. And they absolutely loved Ashikeen's wisdom tips.",
+        "avatarInitial": "T"
       },
       {
-        "number": "₹5Cr+",
-        "label": "Revenue Generated"
+        "name": "Sunita",
+        "role": "Housewife, Nepal",
+        "quote": "Prayash loved today's session on the indian puppetry art form and making his own puppet and story. Different activities and interaction made the session fun and comfortable for him. Thankyou!",
+        "avatarInitial": "S"
       },
       {
-        "number": "4.8★",
-        "label": "Average Rating"
-      }
-    ],
-    "testimonials": [
-      {
-        "name": "Amit Verma",
-        "title": "Freelancer, Pune",
-        "avatar": "/images/uploads/user1.jpg",
-        "quote": "I started earning ₹30K/month after this masterclass!"
-      },
-      {
-        "name": "Priya Singh",
-        "title": "Student, Delhi",
-        "avatar": "/images/uploads/user2.jpg",
-        "quote": "Best investment I made in my career."
+        "name": "Vidya",
+        "role": "Parent, Bangalore",
+        "quote": "Shikha has a wonderful way of connecting with children. My kids were glued to the screen the entire time, which is rare! Highly recommend.",
+        "avatarInitial": "V"
       }
     ]
   },
@@ -80,67 +135,48 @@
     "original_price": "₹1999"
   },
   "faq": {
+    "headline_accent": "Frequently",
+    "headline_main": "Asked Questions",
     "headline": "Frequently Asked Questions",
     "items": [
       {
-        "question": "Is this masterclass live?",
-        "answer": "Yes, it is 100% live and interactive."
+        "question": "What age group is this webinar suitable for?",
+        "answer": "It is open to all age groups from 7 to 70 years! We believe that you are never too young or old to pursue your passion!"
       },
       {
-        "question": "Will I get recording?",
-        "answer": "Yes, recording will be shared for limited time."
+        "question": "Do I need to buy any special materials for the webinar?",
+        "answer": "You need basic supplies like pencil, eraser, paints and brushes. The list will be sent to you through what's app as well."
       },
       {
-        "question": "Is this beginner friendly?",
-        "answer": "Absolutely, no prior experience needed."
+        "question": "Does my child need prior art experience?",
+        "answer": "Not at all! This is beginner-friendly and easy to follow."
+      },
+      {
+        "question": "How long is the webinar?",
+        "answer": "Guided IKS-based workshop sessions\nEasy-to-follow activities\nFamily participation formats\nFun + learning + bonding in one program"
       }
     ]
   },
   "hero": {
     "offer_badge": [
-      {
-        "emoji": "🔒",
-        "text": "Secure Payment"
-      },
-      {
-        "emoji": "✅",
-        "text": "Instant Access"
-      },
-      {
-        "emoji": "🎁",
-        "text": "Limited Seats"
-      }
+      { "emoji": "🔒", "text": "Secure Payment" },
+      { "emoji": "✅", "text": "Instant Access" },
+      { "emoji": "🎁", "text": "Limited Seats" }
     ],
     "meta": [
-      {
-        "icon": "📅",
-        "label": "Date",
-        "value": "2nd May 2026"
-      },
-      {
-        "icon": "🕘",
-        "label": "Time",
-        "value": "9:30AM – 12:30PM IST"
-      },
-      {
-        "icon": "⏳",
-        "label": "Duration",
-        "value": "3 Hours"
-      },
-      {
-        "icon": "🌐",
-        "label": "Language",
-        "value": "English"
-      }
+      { "icon": "📅", "label": "Date", "value": "2nd May 2026" },
+      { "icon": "🕘", "label": "Time", "value": "9:30AM – 12:30PM IST" },
+      { "icon": "⏳", "label": "Duration", "value": "3 Hours" },
+      { "icon": "🌐", "label": "Language", "value": "English" }
     ],
     "price": "499",
     "experience": "5+ Years",
-    "name": "Yash Talele",
-    "urgency_badge": "Live on May 10th",
+    "name": "Shikha Kaushal",
+    "urgency_badge": "Live on May 3rd",
     "subheadline": "Step-by-step system to start earning using Digital Marketing",
-    "headline": "Build a Profitable Online Income in 2026 ",
+    "headline": "Turn This Vacation Into Meaningful Bonding Time",
     "title": "Digital Marketing Coach",
-    "image": "https://img.freepik.com/premium-photo/illustration-instructor_931878-219056.jpg",
+    "image": "https://tagmango.com/staticassets/-best-kids-vaccation-and-parenting-program-bcc58b8ca1c33470f74eca0dabfea38c.png",
     "original_price": "1999",
     "cta_text": "Reserve Your Seat Now",
     "cta_subtext": "Only 50 seats left"
@@ -173,28 +209,23 @@
   "footer": {
     "company_name": "Growth Academy",
     "tagline": "Learn. Grow. Earn.",
-    "refund_policy": "No refunds after purchase"
+    "refund_policy": "No refunds after purchase",
+    "nav": {
+      "Product": ["Features", "Pricing", "Changelog"],
+      "Company": ["About", "Blog", "Careers"],
+      "Legal": ["Privacy", "Terms", "Refund policy"]
+    }
   },
   "who_is_this_for": {
     "headline": "Who Is This For?",
     "audience": [
-      {
-        "point": "Students looking for income"
-      },
-      {
-        "point": "Working professionals wanting side income"
-      },
-      {
-        "point": "Freelancers & entrepreneurs"
-      }
+      { "point": "Students looking for income" },
+      { "point": "Working professionals wanting side income" },
+      { "point": "Freelancers & entrepreneurs" }
     ],
     "not_for": [
-      {
-        "point": "People looking for overnight success"
-      },
-      {
-        "point": "Those not willing to take action"
-      }
+      { "point": "People looking for overnight success" },
+      { "point": "Those not willing to take action" }
     ]
   },
   "seo": {
@@ -208,51 +239,30 @@
     "bioParagraphs": [
       {
         "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": [
-          "5000+",
-          "₹5 Crore"
-        ]
+        "boldPhrases": ["5000+", "₹5 Crore"]
       },
       {
         "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": [
-          "5000+",
-          "₹5 Crore"
-        ]
+        "boldPhrases": ["5000+", "₹5 Crore"]
       },
       {
         "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": [
-          "5000+",
-          "₹5 Crore"
-        ]
+        "boldPhrases": ["5000+", "₹5 Crore"]
       },
       {
         "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": [
-          "5000+",
-          "₹5 Crore"
-        ]
+        "boldPhrases": ["5000+", "₹5 Crore"]
       },
       {
         "text": "Rahul has helped 5000+ students across India build online income streams and generate over ₹5 Crore in revenue using digital marketing strategies.",
-        "boldPhrases": [
-          "5000+",
-          "₹5 Crore"
-        ]
+        "boldPhrases": ["5000+", "₹5 Crore"]
       }
     ],
     "image": "https://img.freepik.com/premium-photo/illustration-instructor_931878-219056.jpg",
     "credentials": [
-      {
-        "point": "₹5Cr+ Revenue Generated"
-      },
-      {
-        "point": "5000+ Students Trained"
-      },
-      {
-        "point": "Featured in Startup India"
-      }
+      { "point": "₹5Cr+ Revenue Generated" },
+      { "point": "5000+ Students Trained" },
+      { "point": "Featured in Startup India" }
     ],
     "followerCount": "1.5 Million +",
     "followerLabel": "followers"

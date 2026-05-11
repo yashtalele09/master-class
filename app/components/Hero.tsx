@@ -5,25 +5,23 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface HeroData {
-  hero: {
-    urgency_badge: string;
-    headline: string;
-    subheadline: string;
-    cta_text: string;
-    cta_subtext: string;
-    image: string;
-    name: string;
-    title: string;
-    experience: string;
-    price: string;
-    original_price: string;
-    meta: { icon: string; label: string; value: string }[];
-    offer_badge: { emoji: string; text: string }[];
-  };
+  urgency_badge: string;
+  headline: string;
+  subheadline: string;
+  cta_text: string;
+  cta_subtext: string;
+  image: string;
+  name: string;
+  title: string;
+  experience: string;
+  price: string;
+  original_price: string;
+  meta: { icon: string; label: string; value: string }[];
+  offer_badge: { emoji: string; text: string }[];
 }
 
-export default function Hero({ data }: { data: HeroData }) {
-  const { hero } = data;
+export default function Hero({ data, labels }: { data: HeroData; labels: any }) {
+  const hero = data;
   const [visible, setVisible] = useState(false);
   const router = useRouter();
 
@@ -164,9 +162,9 @@ export default function Hero({ data }: { data: HeroData }) {
               {/* Coach circle */}
               <div className="relative w-[248px] h-[248px] rounded-full overflow-hidden border-4 border-white shadow-[0_8px_40px_rgba(184,20,26,0.18),0_2px_12px_rgba(0,0,0,0.07)]">
                 <Image
-                  src={data.hero.image}
+                  src={hero.image}
                   fill
-                  alt={data.hero.name || "Instructor"}
+                  alt={hero.name || "Instructor"}
                   className="object-cover object-top"
                 />
               </div>
@@ -175,7 +173,7 @@ export default function Hero({ data }: { data: HeroData }) {
               <div className="absolute top-5 right-0 flex items-center gap-1.5 rounded-full bg-white border border-green-200 px-3 py-1.5 shadow-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-[10px] text-green-600 uppercase tracking-widest font-semibold">
-                  Live
+                  {labels.live}
                 </span>
               </div>
             </div>
@@ -183,10 +181,10 @@ export default function Hero({ data }: { data: HeroData }) {
             {/* Name card */}
             <div className="mt-6 w-full max-w-sm rounded-2xl border border-[#f0dada] bg-white px-6 py-5 text-center shadow-[0_4px_24px_rgba(184,20,26,0.09)]">
               <p className="font-display text-xl font-bold text-[#b8141a]">
-                {data.hero.name}
+                {hero.name}
               </p>
               <p className="mt-1 text-[13px] text-[#9a8080]">
-                {data.hero.title}
+                {hero.title}
               </p>
               <div className="mt-2 flex justify-center items-center gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -199,7 +197,7 @@ export default function Hero({ data }: { data: HeroData }) {
                   </svg>
                 ))}
                 <span className="ml-1.5 text-[11px] text-[#c0a8a8]">
-                  {data.hero.experience} experience
+                  {hero.experience} {labels.experience}
                 </span>
               </div>
             </div>

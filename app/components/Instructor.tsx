@@ -84,7 +84,7 @@ function InstagramIcon() {
 }
 
 /* ─── Main Component ─────────────────────────────────────────── */
-export default function MeetCoach({ data }: { data: CoachData }) {
+export default function MeetCoach({ data, labels }: { data: CoachData; labels: any }) {
   const { ref, inView } = useInView(0.1);
 
   return (
@@ -117,7 +117,7 @@ export default function MeetCoach({ data }: { data: CoachData }) {
           <h2
             className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight"
             style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
-            Meet Your Coach {data.name}
+            {labels.meet_your_coach} {data.name}
           </h2>
           <div className="mt-4 flex justify-center">
             <div className="h-[3px] w-20 bg-white/60 rounded-full" />

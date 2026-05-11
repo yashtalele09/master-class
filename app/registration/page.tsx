@@ -211,9 +211,15 @@ function CheckIcon({ className }: { className?: string }) {
 function SuccessState({
   message,
   onPay,
+  labels,
+  price,
+  original_price,
 }: {
   message: string;
   onPay: () => void;
+  labels: any;
+  price?: string;
+  original_price?: string;
 }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 px-6">
@@ -230,22 +236,25 @@ function SuccessState({
           </p>
           <div className="mb-6 border-t border-zinc-100 dark:border-zinc-800" />
           <p className="text-xs text-zinc-400 mb-2 uppercase tracking-widest font-semibold">
-            Secure your seat
+            {labels.reserve_your_spot || "Secure your seat"}
           </p>
           <p className="text-4xl font-bold text-zinc-900 dark:text-white mb-1">
-            ₹499{" "}
+            {price || "₹499"}{" "}
             <span className="text-base font-normal text-zinc-400">
-              · one-time
+              · {labels.one_time || "one-time"}
             </span>
           </p>
-          <p className="text-xs text-zinc-400 line-through mb-6">₹1,299</p>
+          <p className="text-xs text-zinc-400 line-through mb-6">
+            {original_price || "₹1,299"}
+          </p>
           <button
             onClick={onPay}
             className="w-full rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:from-amber-600 hover:to-orange-600 active:scale-[0.98]">
-            Confirm Seat — Pay ₹499
+            {labels.confirm_seat || "Confirm Seat — Pay"} {price || "₹499"}
           </button>
           <p className="mt-4 text-xs text-zinc-400">
-            🔒 Secured by Razorpay · UPI, cards & netbanking
+            {labels.secured_by ||
+              "🔒 Secured by Razorpay · UPI, cards & netbanking"}
           </p>
         </div>
       </div>
@@ -275,6 +284,7 @@ export default function RegistrationPage() {
 }
 
 function RegisterForm({ data }: RegisterFormProps) {
+  const labels = landingData.labels;
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
@@ -373,7 +383,15 @@ function RegisterForm({ data }: RegisterFormProps) {
   };
 
   if (status === "success")
-    return <SuccessState message={message} onPay={handlePayment} />;
+    return (
+      <SuccessState
+        message={message}
+        onPay={handlePayment}
+        labels={labels}
+        price={data.price}
+        original_price={data.original_price}
+      />
+    );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50/60 to-rose-50/40 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
@@ -395,12 +413,12 @@ function RegisterForm({ data }: RegisterFormProps) {
               strokeLinejoin="round">
               <polyline points="10 3 5 8 10 13" />
             </svg>
-            Back
+            {labels.back || "Back"}
           </button>
 
           {/* Centered badge */}
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-400">
-            ✦ Live Masterclass · Limited Seats ✦
+            {labels.live_masterclass || "✦ Live Masterclass · Limited Seats ✦"}
           </p>
 
           {/* Invisible spacer keeps badge visually centered */}
@@ -415,7 +433,7 @@ function RegisterForm({ data }: RegisterFormProps) {
             {/* Badge + Title */}
             <div>
               <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 mb-3">
-                Live Masterclass
+                {labels.live_masterclass?.split("·")[0]?.trim() || "Live Masterclass"}
               </span>
               <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
                 {data.headline}
@@ -520,7 +538,7 @@ function RegisterForm({ data }: RegisterFormProps) {
             {/* Benefits */}
             <div>
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-                What you&apos;ll gain
+                {labels.what_you_will_gain || "What you'll gain"}
               </p>
               <ul className="space-y-2.5">
                 {benefits.map((benefit, i) => (
@@ -550,9 +568,9 @@ function RegisterForm({ data }: RegisterFormProps) {
                 </div>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
                   <span className="font-bold text-zinc-700 dark:text-zinc-200">
-                    500+ people
+                    500+ {labels.people_registered?.split(" ")[0] || "people"}
                   </span>{" "}
-                  have already registered
+                  {labels.people_registered?.split(" ").slice(1).join(" ") || "have already registered"}
                 </p>
               </div>
             </div>
@@ -564,13 +582,13 @@ function RegisterForm({ data }: RegisterFormProps) {
               {/* Form header */}
               <div className="bg-gradient-to-r from-amber-600 to-orange-600 px-7 py-5">
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-100/80 mb-1">
-                  Free Registration
+                  {labels.free_registration || "Free Registration"}
                 </p>
                 <h2 className="text-xl font-extrabold text-white">
-                  Reserve Your Spot
+                  {labels.reserve_your_spot || "Reserve Your Spot"}
                 </h2>
                 <p className="text-xs text-amber-100/70 mt-1">
-                  Fill in your details below to join the masterclass
+                  {labels.fill_details || "Fill in your details below to join the masterclass"}
                 </p>
               </div>
 
